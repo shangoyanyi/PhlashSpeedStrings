@@ -1,0 +1,20 @@
+{
+  "name": "PhlashSpeedStrings",
+  "description" : "Input strings in a Phlash!",
+  "version": "1.0",    
+  "permissions": ["contextMenus", "activeTab", "tabs"],
+  "icons":{  
+    "128": "logo/logo.png"
+  },
+  "background": {
+    "scripts": ["config.js", "menuScript.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["config.js", "contentScript.js"]
+    }
+  ],
+  "manifest_version": 2  
+}
